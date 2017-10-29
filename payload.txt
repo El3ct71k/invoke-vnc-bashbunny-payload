@@ -1,15 +1,10 @@
 #!/bin/bash
 #
-# Title: Reverse VNC attack
-# Author: Nimrod Levy
+# Title: Invoke VNC attack
+# Author: El3ct71k, (Nimrod Levy, Scorpiones)
 # Version: 1.0
 #
-# This Template installs files from the USB to the Bash Bunny
 # Invoke-Vnc executes a VNC agent in-memory and initiates a reverse connection, or binds to a specified port. Password authentication is supported.
-#
-#
-# G 1000 Payload Running
-# G B 0 Payload Completed
 LED SETUP
 ATTACKMODE HID
 

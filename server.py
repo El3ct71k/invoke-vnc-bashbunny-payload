@@ -1,7 +1,7 @@
 #!/usr/bin/python
 
 """
-Reverse VNC attack
+Invoke VNC attack
 Build by El3ct71k, Nimrod Levy
 El3ct71k@Gmail.com
 """
