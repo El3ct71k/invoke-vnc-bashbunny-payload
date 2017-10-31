@@ -12,26 +12,25 @@ Invoke-Vnc executes a VNC agent in-memory and initiates a reverse connection, or
 
 you must edit the payload file and update the following variables:
 
-* ATTACK_TYPE - on this variable you will choose with which type of payload you want execute
-1. bind - bind a VNC port on the victim host
-2. reverse - connect to attacker VNC server
+* ATTACK_TYPE - with this variable you will choose with which type of payload you want execute (bind connection / reverse connection)
+1. bind - open VNC port on the victim host (connect directly to your victim)
+2. reverse - connect to the attacker VNC server (reverse connection, attacker machine must be on listen mode)
 
 ### for reverse VNC please update the following variables:
-1. ATTACKER_IP - your VNC server
-2. VNC_PASS - VNC password for authentication
-3. PORT - the port of the vnc server that you listen to
+1. ATTACKER_IP - your VNC server (the IP must be resolved from the victim computer)
+2. VNC_PASS - A password for authentication to the victim
+3. PORT - A port that your attacker machine is binded
 
 ### for bind VNC please update the following variables:
-1. VNC_PASS - VNC password for authentication
-2. PORT - the port of that was binded on your VNC server
+1. VNC_PASS - A password for authentication to the victim
+2. PORT - A port that the victim computer will listen to (the IP must be resolved from the attacker computer)
 
 ## On your attacker machine:
-* vncviewer -listen - for reverse vnc server
-* vncviewer IP:PORT - for connect to bind vnc connection
-
+* vncviewer -listen - in order to binds a vnc server on your attacker machine (this command is mentioned to reverse vnc)
+* vncviewer IP:PORT - in order to connect to victim computer (this command is mentioned to bind vnc)
 ## STATUS
 
-1. Purple - Initial to clean the files from previous execution and starts HTTP server
-2. Yellow - Starts HID attack and types a staged payload based on powershell
-3. Cyan - Starts Ethernet attack and let the powershell payload to execute the full payload from the server
+1. Purple - Initial processing (cleanning cache files from previous execution and starts HTTP server)
+2. Yellow - Starts HID attack and typing a staged payload based on powershell
+3. Cyan - Starts Ethernet attack and waiting for the powershell payload that will executes the second payload from the server
 4. Green - Attack Finished
