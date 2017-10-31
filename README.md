@@ -5,7 +5,7 @@
 * Target: Windows 7, 8, 8.1, 10
 
 ## Description
-
+In computing, Virtual Network Computing (VNC) is a graphical desktop sharing system that uses the Remote Frame Buffer protocol (RFB) to remotely control another computer. It transmits the keyboard and mouse events from one computer to another, relaying the graphical screen updates back in the other direction, over a network.
 Invoke-Vnc executes a VNC agent in-memory and initiates a reverse connection, or binds to a specified port. Password authentication is supported.
 
 ## Configuration
@@ -24,6 +24,10 @@ you must edit the payload file and update the following variables:
 ###for bind VNC please update the following variables:
 1. VNC_PASS - VNC password for authentication
 2. PORT - the port of that was binded on your VNC server
+
+## On your attacker machine:
+vncviewer -listen - for reverse vnc server
+vncviewer IP:PORT - for connect to bind vnc connection
 
 ## STATUS
 
