@@ -16,12 +16,12 @@ you must edit the payload file and update the following variables:
 1. bind - bind a VNC port on the victim host
 2. reverse - connect to attacker VNC server
 
-###for reverse VNC please update the following variables:
+### for reverse VNC please update the following variables:
 1. ATTACKER_IP - your VNC server
 2. VNC_PASS - VNC password for authentication
 3. PORT - the port of the vnc server that you listen to
 
-###for bind VNC please update the following variables:
+### for bind VNC please update the following variables:
 1. VNC_PASS - VNC password for authentication
 2. PORT - the port of that was binded on your VNC server
 
