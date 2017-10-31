@@ -26,8 +26,8 @@ you must edit the payload file and update the following variables:
 2. PORT - the port of that was binded on your VNC server
 
 ## On your attacker machine:
-vncviewer -listen - for reverse vnc server
-vncviewer IP:PORT - for connect to bind vnc connection
+* vncviewer -listen - for reverse vnc server
+* vncviewer IP:PORT - for connect to bind vnc connection
 
 ## STATUS
 
