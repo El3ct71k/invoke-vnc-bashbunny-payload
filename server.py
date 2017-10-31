@@ -2,7 +2,7 @@
 
 """
 Invoke VNC attack
-Build by El3ct71k, Nimrod Levy
+Build by El3ct71k, Nimrod Levy (scorpiones)
 El3ct71k@Gmail.com
 """
 
